@@ -62,10 +62,10 @@ COMPANY_NAME=$(echo $COMPANY_NAME | cut -c -30)
 main() {
 
 # Secure SSH by disable password login and only allowing login as user with keys. Also shifts SSH port from 22 to 2222
-echo "Securing SSH..."
-writeSShConfig
-semanage port -a -t ssh_port_t -p tcp 2222
-service sshd restart
+# echo "Securing SSH..."
+# writeSShConfig
+# semanage port -a -t ssh_port_t -p tcp 2222
+# service sshd restart
 
 # Add more DNS servers (cloudflare and google) than just the DHCP one to increase DNS resolve stability
 echo "Add more DNS servers"
